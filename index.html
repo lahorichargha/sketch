@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>sketch</title>
+  <script src='ext/polymaps.js' type='text/javascript'></script>
+  <script src='ext/ender.js' type='text/javascript'></script>
+  <script src='simplify.js' type='text/javascript'></script>
+  <script src='uuid.js' type='text/javascript'></script>
+  <script src='sketch.js' type='text/javascript'></script>
+  <style>
+    body, button {
+      font:15px/20px "Helvetica Neue", "Helvetica", sans-serif;
+    }
+    body {
+      background:#cda577;
+      }
+    html, body, pre, h1, h2, h3, p {
+      margin:0;padding:0;
+    }
+    h1 {
+      color:#fff;
+      width:580px;
+      padding:10px;
+      font-size:30px;
+      line-height:40px;
+    }
+    a.button {
+      display:block;
+      position:absolute;
+      background:#f5dab6;
+      color:#fff;
+      font-size:30px;
+      left:20px;
+      padding:10px;
+    }
+    a.button.active {
+      background:#013f86;
+    }
+    a#draw { top:200px; }
+    a#move { top:250px; }
+    a#geojson { top:300px; }
+
+    pre#geojson-output {
+      margin:0;
+      position:absolute;
+      overflow:auto;
+      width:100%;
+      height:100px;
+      bottom:0;
+      background:#dec4a5;
+      color:#222;
+    }
+  </style>
+</head>
+<body>
+  <a class='button active' href='#' id='draw'>draw</a>
+  <a class='button' href='#' id='move'>move</a>
+  <a class='button' href='#' id='geojson'>geojson</a>
+  <pre id='geojson-output'></pre>
+  <div id='map'></div>
+  <script src='index.js' type='text/javascript'></script>
+</body>
+</html>
